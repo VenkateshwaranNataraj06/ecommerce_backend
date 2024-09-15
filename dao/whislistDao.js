@@ -2,30 +2,13 @@ const {Whislist }= require('../models/whislistModel');
 const mongoose = require('mongoose'); 
 
 
-// const getCartDao=async()=>{
-//   try{
-//     const cart= await Cart.find()
-//     return cart
-//   }
-//   catch(error)
-//   {
-//     throw error; 
-//   }
-// }
 
 const getWhislistDao = async (userId,role ) => {
   try {
     console.log("fetching Whislist..........");
     
     console.log(role,"role",userId,"userid");
-    
-    // if (role === "admin") {
-    //   console.log(role, "Role: Admin, fetching all Carts");
-    //   const whislist = await Whislist.find()
-    //     .populate('user')
-    //     .populate('items.product');
-    //   return whislist;
-    // } else {
+
        console.log(userId,"userid else");
    
        
@@ -55,16 +38,6 @@ const getWhislistByIdDao = async (id) => {
   }
 };
 
-
-// const createCartDao = async (cartData) => {
-//   try {
-//     const cart =  new Cart(cartData);
-//     await cart.save();
-//     return cart;
-//   } catch (error) {
-//     throw error; 
-//   }
-// };
 
 const createWhislistDao = async (userId,whislistData) => {
     console.log("createWhislistDao???????????????");
@@ -108,19 +81,7 @@ const updatedWhislistDao = async (id, updatedCartData) => {
   }
 };
 
-// const deleteWhislistDao=async(id)=>{
-//   try {
-//     console.log("deleteWhislistDao............");
-    
-//     const deleteWhislist=await Whislist.findByIdAndDelete(id)
-//     console.log(deleteWhislist,"deleteWhislist");
-    
-//     return deleteWhislist;
-//   } catch (error) {
-//     throw error;
-    
-//   }
-// }
+
 
 
 const deleteWhislistDao=async( id,pId)=>{

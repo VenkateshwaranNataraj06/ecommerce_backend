@@ -11,18 +11,18 @@ const validateProduct = async (req, res, next) => {
     const { name, price, description, category,brand, stock, images } = req.body;
 
     const { id } = req.params;
-    console.log('Name:', name);
-    console.log('Price:', price);
-    console.log('Description:', description);
-    console.log('Category:', category);
-    console.log('Brand:', brand);
-    console.log('Stock:', stock);
-    console.log('Images:', images);
+    // console.log('Name:', name);
+    // console.log('Price:', price);
+    // console.log('Description:', description);
+    // console.log('Category:', category);
+    // console.log('Brand:', brand);
+    // console.log('Stock:', stock);
+    // console.log('Images:', images);
 
 
-    console.log('Files:', req.files); 
-    console.log('File:', req.file); 
-    console.log('body', req.body); 
+    // console.log('Files:', req.files); 
+    // console.log('File:', req.file); 
+    // console.log('body', req.body); 
 
 
 
@@ -153,7 +153,7 @@ const isValidUrl = (url) => {
     }
   };
   const isValidLocalPath = (path) => {
-    // Add more validation if needed
+   
     return typeof path === 'string' && path.trim().startsWith('/');
   };
   

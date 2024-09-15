@@ -2,16 +2,6 @@ const {Cart }= require('../models/cartModel');
 const mongoose = require('mongoose'); 
 
 
-// const getCartDao=async()=>{
-//   try{
-//     const cart= await Cart.find()
-//     return cart
-//   }
-//   catch(error)
-//   {
-//     throw error; 
-//   }
-// }
 
 const getCartDao = async (userId,role ) => {
   try {
@@ -56,15 +46,6 @@ const getCartByIdDao = async (id) => {
 };
 
 
-// const createCartDao = async (cartData) => {
-//   try {
-//     const cart =  new Cart(cartData);
-//     await cart.save();
-//     return cart;
-//   } catch (error) {
-//     throw error; 
-//   }
-// };
 
 const createCartDao = async (userId,cartData) => {
   try {
@@ -95,7 +76,7 @@ const createCartDao = async (userId,cartData) => {
         
       return  item.product._id.toString() === product
       });
-      // console.log(itemIndex,"itemindes");
+
       
 
       if (itemIndex > -1) {
@@ -112,7 +93,7 @@ const createCartDao = async (userId,cartData) => {
     }
 
     await cart.save();
-console.log(("created dao cart" ,cart));
+
 
     return cart;
   } catch (error) {
@@ -133,53 +114,9 @@ const updatedCartDao = async (id, updatedCartData) => {
   }
 };
 
-// const deleteCartDao=async(id)=>{
-//   try {
-//     const deleteCart=await Cart.findByIdAndDelete(id)
-//     return deleteCart;
-//   } catch (error) {
-//     throw error;
-    
-//   }
-// }
 
 
-// const deleteCartDao=async( id,pId)=>{
-//   const userId = id
-//   // const { productId } = pId;
-// console.log("cart dao...",pId,userId );
-// // const productId =new mongoose.Types.ObjectId(pId);
-// // console.log(productId ,"productId ");
-// try{
-//   let cart = await Cart.findOne({ user: userId });
 
-//   if (cart) {
-//     // console.log("cart",cart);
-    
-//     const itemIndex = cart.items.findIndex(item => item.product.toString() === pId);
-//     console.log(itemIndex,"itemindex");
-//     // console.log("itemIndex",itemIndex,cart.items);
-    
-
-//     if (itemIndex > -1) {
-//       // Product exists in the cart, remove it
-//       console.log("// Product exists in the cart, remove it");
-      
-//       cart.items.splice(itemIndex, 1);
-//       cart = await cart.save();
-//       return cart;
-//     } 
-// }
-// }
-// catch(error)
-// {
-//   console.log(error,"error");
-
-//   throw error
-  
-// }
-
-// }
 
 
 

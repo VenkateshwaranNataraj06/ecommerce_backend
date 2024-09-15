@@ -1,29 +1,6 @@
 const {Order }= require('../models/orderModel');
 
 
-// const getOrderDao=async(role,id)=>{
-//   try{
-   
-
-//     if (role === "admin") {
-//       console.log(decoded.role, " decoded.role in getbyid");
-//       const order = await Order.find().populate('user').populate('products.product');
-//       return order
-//     }
-   
-  
-//   else{
-//     console.log("Fetching Order by ID");
-//     const orderById = await Order.findById(id) 
-//     return orderById;
-
-//   }
-//   }
-//   catch(error)
-//   {
-//     throw error; 
-//   }
-// }
 
 const getOrderDao = async (role, userId) => {
   try {

@@ -75,16 +75,3 @@ module.exports = {
  
 };
 
-
-// try {
-//   console.log('Fetching users...');
-// const users = await User.User.find();
-// console.log('Users fetched:', users);
-
-// res.status(200).json(users);
-
-// } catch (error) {
-//   console.log(error);
-  
-// res.status(500).json({ message: 'Error retrieving users', error });
-// }
