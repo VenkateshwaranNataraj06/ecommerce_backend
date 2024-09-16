@@ -37,7 +37,7 @@ const createProduct = async (req, res) => {
       
       let imagePaths = [];
       if (req.files && req.files.length > 0) {
-        imagePaths = req.files.map(file => `http://localhost:4000/uploads/${file.filename}`);
+        imagePaths = req.files.map(file => `https://ecommerce-backend-5y1u.onrender.com/uploads/${file.filename}`);
       } else if (images && images.length > 0) {
         
         imagePaths = Array.isArray(images) ? images : [images];
