@@ -185,7 +185,7 @@ let  imagePath;
     if (req.file) {
       console.log(req.file,"req.file");
       
-         imagePath = `https://ecommerce-backend-5y1u.onrender.com/uploads/${req.file.filename}`
+         imagePath = `${process.env.API}/uploads/${req.file.filename}`
     }
     const updatedUserData = {
       ...req.body,
