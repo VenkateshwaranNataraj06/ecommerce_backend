@@ -39,7 +39,7 @@ app.use('/category',categoryApi);
 app.use('/whislist',whislistApi);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-const db=process.env.MONGODB_URI
+const db=process.env.MONGODB_URL
 mongoose.connect(db)
   .then(() => {
     console.log('MongoDB connected')
